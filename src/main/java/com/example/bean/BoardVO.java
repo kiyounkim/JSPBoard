@@ -5,11 +5,15 @@ import java.util.Date;
 public class BoardVO {
 	private int seq;
 	private String category;
-	private String title;
-	private String writer;
-	private String content;
-	private Date regdate;
-	private int cnt;
+
+	public int getSeq() {
+		return seq;
+	}
+
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+
 	public String getCategory() {
 		return category;
 	}
@@ -17,12 +21,13 @@ public class BoardVO {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public int getSeq() {
-		return seq;
+
+	public String getPhoto() {
+		return photo;
 	}
 
-	public void setSeq(int seq) {
-		this.seq = seq;
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 
 	public String getTitle() {
@@ -64,4 +69,20 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
+	private String photo;
+	private String title;
+	private String writer;
+	private String content;
+	private Date regdate;
+
+	public Date getEditdate() {
+		return editdate;
+	}
+
+	public void setEditdate(Date editdate) {
+		this.editdate = editdate;
+	}
+
+	private Date editdate;
+	private int cnt;
 }
